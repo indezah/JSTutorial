@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    input {
+      width: 300px;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div onmouseout="discount()"
+    style="padding:25px;height:200px; width: 500px; text-align: center; background-color: gainsboro;">
+    <form action="">
+      Insert the amount: <br>
+      <input type="text" id="num">
+      <p id="di"></p>
+    </form>
+  </div>
+  <script>
+    function discount() {
+      let a = document.getElementById("num").value
+      document.getElementById("di").innerHTML = "20% of the value: " + 0.2 * a + "<br>" + "Total: " + a + " + " + 0.2 * a
+    }
+  </script>
+</body>
+
+
+</html>

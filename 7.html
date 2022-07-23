@@ -1,0 +1,53 @@
+<html>
+
+<head>
+  <style>
+    body {
+      background-color: #f2f2f2;
+    }
+
+    form {
+      margin: 10px;
+    }
+
+    form * {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <input type="checkbox" name="progress" id="progress1" value="1" tabIndex="1" onClick="ckChange(this)">Wedding
+  Package<br>
+  <input type="checkbox" name="progress" id="progress2" value="1" tabIndex="1" onClick="ckChange(this)">Birthday
+  Package<br>
+  <input type="checkbox" name="progress" id="progress3" value="1" tabIndex="1" onClick="ckChange(this)">Normal
+  Function
+  Package<br>
+  <input type="checkbox" name="progress" id="progress4" value="1" tabIndex="1" onClick="ckChange(this)">Day out Package
+  <script>
+    function ckChange(ckType) {
+
+      var ckName = document.getElementsByName(ckType.name);
+      var checked = document.getElementById(ckType.id);
+
+      if (checked.checked) {
+        for (var i = 0; i < ckName.length; i++) {
+
+          if (!ckName[i].checked) {
+            ckName[i].disabled = true;
+          } else {
+            ckName[i].disabled = false;
+          }
+        }
+      }
+      else {
+        for (var i = 0; i < ckName.length; i++) {
+          ckName[i].disabled = false;
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>

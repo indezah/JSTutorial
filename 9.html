@@ -1,0 +1,52 @@
+<html>
+
+<head>
+  <style>
+    body {
+      background-color: #f2f2f2;
+    }
+
+    form {
+      margin: 10px;
+    }
+
+    form * {
+      padding: 10px;
+      width: 400px;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <form id="form1">
+    Subject: &nbsp; <input type="text" id="subject"><br>
+    Marks: &nbsp;&nbsp;<input type="text" id="mark">
+    <br><br>
+    <input style="width:400px; background-color:#9900ff; color:white; border:none;" id="submitb" type="submit"
+      value="Submit">
+    <p id="area"></p>
+  </form>
+
+  <script>
+
+    const date = new Date();
+    document.getElementById("form1").addEventListener("submit", (event) = function (event) {
+      event.preventDefault()
+      let s = document.getElementById("subject").value
+      let m = document.getElementById("mark").value
+      let stat = ""
+      if (mark < 30) {
+        stat = "Fail"
+      }
+      else {
+        stat = "Pass"
+      }
+      document.getElementById("area").innerHTML = stat
+    })
+
+  </script>
+</body>
+
+</html>

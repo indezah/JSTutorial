@@ -1,0 +1,43 @@
+<html>
+
+<head>
+  <style>
+    body {
+      background-color: #f2f2f2;
+    }
+
+    form {
+      margin: 10px;
+    }
+
+    form * {
+      padding: 10px;
+      width: 400px;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <form id="form1">
+    Insert the number<br><input type="text" id="number"><br>
+
+    <input style="width:120px; background-color:#4caf50; color:white; border:none;" id="submitb" type="submit"
+      value="Find Root">
+  </form>
+
+  <script>
+
+    const date = new Date();
+    document.getElementById("form1").addEventListener("submit", (event) = function (event) {
+      event.preventDefault()
+
+      let h = document.getElementById("number").value
+      alert(Math.sqrt(h))
+    })
+
+  </script>
+</body>
+
+</html>

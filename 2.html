@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: "Arial";
+        }
+    </style>
+</head>
+
+<body>
+    <p id="date"></p>
+    <div id="greenbox" style="height:50px; width:300px; background-color:#4caf50; text-align:center; padding-top:25px">
+        wer</div>
+
+    <script>
+        const date = new Date();
+        let ampm = ""
+        if (date.getHours() >= 12) {
+            ampm = "PM"
+        } else {
+            ampm = "AM"
+        }
+
+        let h = date.getHours()
+        if (date.getHours() > 12) {
+            h = h - 12
+        }
+        let m = date.getMinutes()
+        if (date.getMinutes() < 10) {
+            m = "0" + m
+        }
+        document.getElementById("date").innerHTML = "Now the time is " + h + ":" + m + ampm
+        document.getElementById("greenbox").innerHTML = 24 - date.getHours() + " hours remaining";
+
+    </script>
+</body>
+
+</html>
